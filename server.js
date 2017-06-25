@@ -15,6 +15,7 @@ app.use((req, res, next)=>{
     //         console.log("unable to write file to server.log");
     //     }
     // }));
+    fs.appendFileSync("server.log", log+"\n");
     next();
 });
 
