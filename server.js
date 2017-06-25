@@ -10,11 +10,11 @@ app.use((req, res, next)=>{
     var now = new Date().toString();
     var log = `Date: ${now}, ${req.method}, ${req.url}`;
     console.log(log);
-    fs.appendFileSync("server.log", log + "\n", ((err)=>{
-        if(err) {
-            console.log("unable to write file to server.log");
-        }
-    }));
+    // fs.appendFileSync("server.log", log + "\n", ((err)=>{
+    //     if(err) {
+    //         console.log("unable to write file to server.log");
+    //     }
+    // }));
     next();
 });
 
